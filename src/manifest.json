@@ -1,17 +1,28 @@
 {
-    "name": "HTTP/2 and SPDY indicator"
-  , "description": "An indicator showing page is loaded using SPDY or HTML/2."
-  , "version": "0.1.0"
-  , "manifest_version": 2
-  , "permissions": ["tabs", "webRequest", "webNavigation", "<all_urls>"]
-  , "background": {
-        "persistent": false
-      , "scripts": [
-          "background.js"
-        ]
-    }
-  , "icons": {
-        "48": "imgs/icon48.png"
-      , "128": "imgs/icon.png"
-    }
+	"name": "HTTP/2 indicator",
+	"description": "An indicator showing page is loaded using HTML/2. SPDY support is removed since Firefox 51.",
+	"version": "0.2.0",
+	"manifest_version": 2,
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"webNavigation",
+		"<all_urls>"
+	],
+	"page_action": {
+		"default_title": "HTTP/2",
+		"default_icon": {
+			"19": "imgs/icon-default.png",
+			"38": "imgs/icon-default-scale2.png"
+		}
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"icons": {
+		"48": "imgs/icon48.png",
+		"128": "imgs/icon.png"
+	}
 }
